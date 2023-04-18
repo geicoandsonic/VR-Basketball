@@ -45,13 +45,13 @@ public class fly : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider col)
+    /*private void OnTriggerExit(Collider col)
     {
         if (col.tag == "HorseSpace")
         {
             col.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
-    }
+    }*/
 
 
 }
