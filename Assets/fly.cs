@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class fly : MonoBehaviour
 {
-
+    public static fly Instance;
     public float speed = .2f;
     private float movementX;
     private float movementY;
     private float rotationX;
     private float rotationY;
+    public int segmentIndex = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,23 @@ public class fly : MonoBehaviour
         this.transform.position = new Vector3(transform.position.x +
             speed * -movementY, transform.position.y, transform.position.z
              + speed * movementX);
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if(col.tag == "HorseSpace")
+        {
+            segmentIndex = horseGamemode.Instance.checkHorseSegment(this.transform);
+            col.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "HorseSpace")
+        {
+            col.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        }
     }
 
 

@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ishan_indoor_court_duplicate.unity
+    guid: 834730af89ccc174a9a22b0b9a5db097
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b8e7ee1b0167e4747a2ec47b4742ad15, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fc854a9abc29d3d44992ea1fb12a50f2, type: 2}

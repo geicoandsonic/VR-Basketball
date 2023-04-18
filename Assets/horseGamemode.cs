@@ -5,7 +5,7 @@ using UnityEngine;
 public class horseGamemode : MonoBehaviour
 {
     public Transform[] segmentLocations;
-    horseGamemode Instance;
+    public static horseGamemode Instance;
 
     private void Awake()
     {

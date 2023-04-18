@@ -70,15 +70,33 @@ public class GrabbableObject : MonoBehaviour
 
     public void OnTriggerEnter(Collider col)
     {
-        /*while(col.tag == "Hoop") May cause crashes
+        while(col.tag == "Hoop")
         {
             isGettingPoint = true;          
         }
         if (isGettingPoint)
         {
-            Debug.Log("Point");
+            switch (fly.Instance.segmentIndex)
+            {
+                case (0):
+                    Debug.Log("H");
+                    break;
+                case (1):
+                    Debug.Log("O");
+                    break;
+                case (2):
+                    Debug.Log("R");
+                    break;
+                case (3):
+                    Debug.Log("S");
+                    break;
+                case (4):
+                    Debug.Log("E");
+                    break;
+
+            }
             isGettingPoint = false;
-        }*/
+        }
         
     }
 }
