@@ -23,13 +23,16 @@ public class horseGamemode : MonoBehaviour
         foreach(Transform segment in segmentLocations)
         {
             float distBetween = Vector3.Distance(player.position, segment.position);
+            Debug.Log(distBetween);
             if(distBetween < dist)
             {
+                Debug.Log("Changing distance");
                 dist = distBetween;
                 index = countOfSeg;
             }
             countOfSeg++;
         }
+        Debug.Log(index);
         return index;
     }
 }

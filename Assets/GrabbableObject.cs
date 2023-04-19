@@ -6,6 +6,7 @@ public class GrabbableObject : MonoBehaviour
 {
     public bool isGrabbed = false;
     public bool hasBeenGrabbed = false;
+    public int velocityModifier = 3;
     [SerializeField] private bool isGettingPoint;
     public void Grab(Vector3 currPos){
         isGrabbed = true;
@@ -45,7 +46,7 @@ public class GrabbableObject : MonoBehaviour
             this.transform.SetParent(null);
             this.GetComponent<Rigidbody>().useGravity = true;
             
-            this.GetComponent<Rigidbody>().velocity = 3*OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+            this.GetComponent<Rigidbody>().velocity = velocityModifier*OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
         }
         if(transform.position.y < -1)
         {

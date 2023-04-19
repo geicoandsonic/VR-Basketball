@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1520
     height: 756.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 94
+  controlID: 16
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 95
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 96
+  controlID: 18
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -372,22 +372,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Oculus/VR/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Oculus/VR/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\johnw\OneDrive\Documents\GitHub\VR-Basketball
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a780000
-    m_LastClickedID: 30730
-    m_ExpandedIDs: 000000000a78000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 175}
+    m_SelectedIDs: f2950000
+    m_LastClickedID: 38386
+    m_ExpandedIDs: 00000000f67c000072950000da95000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a780000
+    m_ExpandedIDs: 00000000f67c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -440,8 +440,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 04960000
+    m_LastClickedInstanceID: 38404
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -467,7 +467,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 41}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -542,24 +542,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 225.20001}
-      m_SelectedIDs: 32790000
-      m_LastClickedID: 31026
-      m_ExpandedIDs: 00fbfeff2203ffff2e0fffff7813ffff0817ffff94f8ffffccf8ffffecf8fffff0f8ffff00f9ffff04f9ffff20f9ffff42f9ffffd6faffff407900006e790000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: dca7ffff
+      m_LastClickedID: -22564
+      m_ExpandedIDs: 2ea9ffffacbaffff90bcffff22fbffffa4b2000008b30000beb30000a2b40000d2b40000d4b40000dab40000e2b40000e4b40000e6b40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: CylinderMain (4)
-        m_OriginalName: CylinderMain (4)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -89508
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 508.50006, y: 538.5}
+  m_TargetSize: {x: 406.80005, y: 430.8}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -978,10 +978,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -203.40002
-    m_HBaseRangeMax: 203.40002
-    m_VBaseRangeMin: -215.40001
-    m_VBaseRangeMax: 215.40001
+    m_HBaseRangeMin: -162.72002
+    m_HBaseRangeMax: 162.72002
+    m_VBaseRangeMin: -172.31999
+    m_VBaseRangeMax: 172.31999
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1001,7 +1001,7 @@ MonoBehaviour:
       y: 21
       width: 406.80005
       height: 430.8
-    m_Scale: {x: 0.99999994, y: 0.99999994}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 203.40002, y: 215.4}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1009,12 +1009,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -203.40004
-      y: -215.40001
-      width: 406.80008
-      height: 430.80002
+      x: -203.40002
+      y: -215.4
+      width: 406.80005
+      height: 430.8
     m_MinimalGUI: 1
-  m_defaultScale: 0.99999994
+  m_defaultScale: 1
   m_LastWindowPixelSize: {x: 508.50006, y: 564.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

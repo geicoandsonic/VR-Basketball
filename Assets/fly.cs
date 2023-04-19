@@ -15,7 +15,7 @@ public class fly : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -38,6 +38,7 @@ public class fly : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
+        Debug.Log(col.name);
         if(col.tag == "HorseSpace")
         {
             segmentIndex = horseGamemode.Instance.checkHorseSegment(this.transform);

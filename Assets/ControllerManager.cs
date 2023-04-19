@@ -23,7 +23,6 @@ public class ControllerManager : MonoBehaviour
     public bool GetTriggerPressed(){
         if((OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger) > 0 || OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger) > 0))
         {
-            Debug.Log("Hello hitting a trigger");
             GrabObject();
             return true;
         }
@@ -50,11 +49,8 @@ public class ControllerManager : MonoBehaviour
             foreach (var col in nearbyObj)
             {
                 float temp = Vector3.Distance(col.transform.position, currPos);
-                Debug.Log(temp + "temp");
-                Debug.Log(smallestDistance + "smallest distance");
                 if (smallestDistance > temp)
                 {
-                    Debug.Log("new smallest");
                     smallestDistance = temp;
                     Debug.Log(col.name);
                     grabbedObject = col.gameObject;
@@ -80,7 +76,6 @@ public class ControllerManager : MonoBehaviour
 
     public bool GetButtonPressed(){
         if(OVRInput.GetUp(OVRInput.Button.Any)){
-            Debug.Log("Hit button");
             CastRay();
             return true;
         }
@@ -91,7 +86,6 @@ public class ControllerManager : MonoBehaviour
         RaycastHit hit;
         Vector3 forwardRay = GetPointingDir();
         if (Physics.Raycast(transform.position, forwardRay, out hit, 10)){
-            Debug.Log("Hit an object");
             selectedObject = hit.collider.gameObject;
             if(selectedObject.gameObject.TryGetComponent(out SelectableObject selecty)){
                 selecty.Highlight();
