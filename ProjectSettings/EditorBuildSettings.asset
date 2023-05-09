@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/ishan_indoor_court_duplicate.unity
+  - enabled: 0
+    path: Assets/Scenes/ishan_stadium_scene.unity
     guid: 834730af89ccc174a9a22b0b9a5db097
+  - enabled: 1
+    path: Assets/Scenes/hoopIntroScene.unity
+    guid: 96aedd68fb4f18742aa2d03a4faf2cf1
+  - enabled: 1
+    path: Assets/Scenes/normalHorse.unity
+    guid: 68c4f49ad6b6cb1439c2ef6696d1a7c9
+  - enabled: 1
+    path: Assets/Scenes/moveAroundScene.unity
+    guid: badfc010779c54843973c6e9d926e0a9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b8e7ee1b0167e4747a2ec47b4742ad15, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fc854a9abc29d3d44992ea1fb12a50f2, type: 2}

@@ -22,7 +22,7 @@ public class moveHoop : MonoBehaviour
     {
         if (!spotChosen)
         {
-            spot = Random.Range(0, teleportLocations.Count);
+            spot = Random.Range(0, teleportLocations.Count-1);
             if (spot == prevSpot) //Make sure that the spot we lerp to is not the same as the previous one
             {
                 spot += 1;
