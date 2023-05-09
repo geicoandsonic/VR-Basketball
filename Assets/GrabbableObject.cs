@@ -6,7 +6,8 @@ public class GrabbableObject : MonoBehaviour
 {
     public bool isGrabbed = false;
     public bool hasBeenGrabbed = false;
-    [SerializeField] private bool isGettingPoint;
+    public int velocityModifier = 3;
+    
     public void Grab(Vector3 currPos){
         isGrabbed = true;
         if(Vector3.Distance(this.transform.position,currPos) > 2)
@@ -15,14 +16,14 @@ public class GrabbableObject : MonoBehaviour
         }
         else
         {
-            Debug.Log(Vector3.Distance(this.transform.position, currPos));
+            //Debug.Log(Vector3.Distance(this.transform.position, currPos));
         }
         
     }
 
     public void Awake()
     {
-        isGettingPoint = false;
+        //isGettingPoint = false;
     }
     public void releaseGrab()
     {
@@ -45,7 +46,7 @@ public class GrabbableObject : MonoBehaviour
             this.transform.SetParent(null);
             this.GetComponent<Rigidbody>().useGravity = true;
             
-            this.GetComponent<Rigidbody>().velocity = 3*OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+            this.GetComponent<Rigidbody>().velocity = velocityModifier*OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
         }
         if(transform.position.y < -1)
         {
@@ -68,35 +69,5 @@ public class GrabbableObject : MonoBehaviour
         transform.position = targetPosition;
     }
 
-    public void OnTriggerEnter(Collider col)
-    {
-        while(col.tag == "Hoop")
-        {
-            isGettingPoint = true;          
-        }
-        if (isGettingPoint)
-        {
-            switch (fly.Instance.segmentIndex)
-            {
-                case (0):
-                    Debug.Log("H");
-                    break;
-                case (1):
-                    Debug.Log("O");
-                    break;
-                case (2):
-                    Debug.Log("R");
-                    break;
-                case (3):
-                    Debug.Log("S");
-                    break;
-                case (4):
-                    Debug.Log("E");
-                    break;
-
-            }
-            isGettingPoint = false;
-        }
-        
-    }
+   
 }
