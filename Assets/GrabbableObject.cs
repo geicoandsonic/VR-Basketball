@@ -45,6 +45,10 @@ public class GrabbableObject : MonoBehaviour
             hasBeenGrabbed = false;
             this.transform.SetParent(null);
             this.GetComponent<Rigidbody>().useGravity = true;
+            if(angleAndSpeed.Instance != null) //We only show this info on practice mode
+            {
+                angleAndSpeed.Instance.onBallThrown();
+            }
             
             this.GetComponent<Rigidbody>().velocity = velocityModifier*OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
         }
@@ -53,6 +57,11 @@ public class GrabbableObject : MonoBehaviour
             this.transform.position = new Vector3(transform.position.x, -1, transform.position.z);
             this.GetComponent<Rigidbody>().useGravity = false;
             this.GetComponent<Rigidbody>().isKinematic = false;
+            if(angleAndSpeed.Instance != null)
+            {
+                angleAndSpeed.Instance.ballLanded();
+            }
+            
         }
     }
 
