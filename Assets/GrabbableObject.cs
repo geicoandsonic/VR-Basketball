@@ -8,6 +8,7 @@ public class GrabbableObject : MonoBehaviour
     public bool hasBeenGrabbed = false;
     public int velocityModifier = 3;
     [SerializeField] private bool isGettingPoint;
+    public AudioSource audio;
     public void Grab(Vector3 currPos){
         isGrabbed = true;
         if(Vector3.Distance(this.transform.position,currPos) > 2)
@@ -76,10 +77,13 @@ public class GrabbableObject : MonoBehaviour
             yield return null;
         }
         transform.position = targetPosition;
+        audio.Play();
+        OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
     }
 
     public void OnTriggerEnter(Collider col)
     {
+       
         Debug.Log(col.tag);
         if(col.tag == "Hoop")
         {
@@ -115,5 +119,10 @@ public class GrabbableObject : MonoBehaviour
             isGettingPoint = false;
         }
         
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        audio.Play();
     }
 }
