@@ -26,14 +26,7 @@ public class angleAndSpeed : MonoBehaviour
             // calculate the throw vector
             Vector3 direction = basketBall.transform.position - transform.position;
             throwVector = new Vector3(direction.x, 0, direction.z);
-            /*
-            // calculate the throw angle
-            throwAngle = Vector3.Angle(Vector3.up, throwVector);
-            if (throwVector.x < 0)
-            {
-                throwAngle = 360 - throwAngle;
-            }
-            */
+
             // Throw Speed
             throwSpeed = throwVector.magnitude;
             Rigidbody rb = basketBall.GetComponent<Rigidbody>();
