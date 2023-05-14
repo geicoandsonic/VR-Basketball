@@ -9,6 +9,7 @@ public class GrabbableObject : MonoBehaviour
     public int velocityModifier = 3;
     [SerializeField] private bool isGettingPoint;
     public AudioSource audio;
+    public int totalPoints = 0;
     public void Grab(Vector3 currPos){
         isGrabbed = true;
         if(Vector3.Distance(this.transform.position,currPos) > 2)
